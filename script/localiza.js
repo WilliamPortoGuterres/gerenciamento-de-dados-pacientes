@@ -6,7 +6,7 @@ $( "#logradouro" ).empty();
  var cidade=  $( "#cidade" ).val();
 var uf=  $( "#uf" ).val();
 
-if(rua!="" && cidade!="" && uf!="" ){
+if(rua!="" && cidade!="" && uf!="" && rua.length>=3){
 
 
 $.getJSON("http://viacep.com.br/ws/"+ uf +"/"+ cidade + "/"+ rua + "/json", function(data) {
